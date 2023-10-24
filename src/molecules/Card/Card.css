@@ -1,0 +1,11 @@
+.containerCard{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    width: 10rem;
+    flex-direction: column;
+    box-shadow: 1px 1px 1px 1px rgb(182, 180, 180);
+    border-radius: 5px;
+    margin-bottom: 5vh;
+}
