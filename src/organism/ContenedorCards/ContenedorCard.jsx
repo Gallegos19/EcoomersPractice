@@ -9,7 +9,7 @@ export default function ContenedorCard() {
   return (
     <div className='ContainerCard'>
       {productos.map((producto, index) => (
-        <Card key={index} img={producto.imagen} titulo={producto.nombre} precio={producto.precio} />
+        <Card key={index} img={producto.img} titulo={producto.nombre} precio={producto.precio} />
       ))}
     </div>
   );

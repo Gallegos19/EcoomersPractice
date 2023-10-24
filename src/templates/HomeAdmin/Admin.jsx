@@ -36,7 +36,8 @@ export default function Admin() {
     const productoCreado = {
       id: nuevoId,
       ...nuevoProducto,
-      cantidad: 1
+      cantidad: 1,
+      img:URL.createObjectURL(nuevoProducto.img)
     };
     const nuevaListaDeProductos = [...listaProductos, productoCreado];
     setListaProductos(nuevaListaDeProductos);
@@ -76,7 +77,7 @@ export default function Admin() {
       <ul className="product-list">
         {listaProductos.map(producto => (
           <li key={producto.id} className="product-item">
-            {producto.img && <img className="product-image" src={URL.createObjectURL(producto.img)} alt="" />}
+            {producto.img && <img className="product-image" src={(producto.img)} alt="" />}
             <div className="product-details">
               <span className="product-name">Nombre: {producto.nombre}</span>
               <span className="product-price"> Precio: ${producto.precio}</span>
